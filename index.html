@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>♥</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <script  type="text/javascript">
+        document.addEventListener("mousemove", function(e){
+            var body = document.querySelector('body');
+            var heart = document.createElement("span");
+            var x = e.offsetX;
+            var y = e.offsetY;
+            heart.style.left = x+'px';
+            heart.style.top = y+'px';
+            body.appendChild(heart);
+            var size = Math.random(0.1,0.9) * 100;
+            heart.style.width = size+'px';
+            heart.style.height = size+'px';
+            body.appendChild(heart);
+
+            setTimeout(function(){
+                heart.remove();
+            },1900);
+        })
+        </script>
+    </body>
+</html>
